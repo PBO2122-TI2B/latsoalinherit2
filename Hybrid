@@ -1,0 +1,33 @@
+package Hybrid;
+public class Kendaraan {
+    void fungsi(){
+        System.out.println("Fungsi    : Membantu perpindahan arus manusia dan barang ke berbagai wilayah.");
+        System.out.println("Jenis     : Transportasi Darat");
+    }
+}
+
+public class RodaDua extends Kendaraan{
+    void tipe(){
+        System.out.println("Tipe      : Kendaraan Roda Dua");
+    }
+}
+
+public class RodaEmpat extends Kendaraan{
+    void tipe(){
+        System.out.println("Tipe      : Kendaraan Roda Empat");
+    }
+}
+
+public class Motor extends RodaDua{
+    void kapasitasPenumpang(){
+        System.out.println("Motor");
+        System.out.println("Kapasitas Penumpang adalah 2 orang.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Motor m = new Motor();
+        m.kapasitasPenumpang(); m.tipe(); m.fungsi();
+    }
+}
