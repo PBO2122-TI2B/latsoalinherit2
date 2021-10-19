@@ -1,0 +1,44 @@
+package Hierarchical;
+public class Transportasi{
+    void fungsi(){
+        System.out.println("Fungsi    : Membantu perpindahan arus manusia dan barang ke berbagai wilayah.");
+    }
+    void darat(){
+        System.out.println("Jenis     : Transportasi Darat");
+    }
+    void air(){
+        System.out.println("Jenis     : Transportasi Air");
+    }
+    void udara(){
+        System.out.println("Jenis     : Transportasi Darat");
+    }
+}
+
+public class Mobil extends Transportasi{
+    void roda(){
+        System.out.println("Mobil adalah Kendaraan Roda Empat");
+    }
+}
+
+public class Kapal extends Transportasi{
+    void tenaga(){
+        System.out.println("Kapal dengan tenaga penggerak motor atau diesel");
+    }
+}
+
+public class Pesawat extends Transportasi{
+    void propulsi(){
+        System.out.println("Propulsi Pewasat adalah Pesawat Terbang Layang");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Mobil m = new Mobil();
+        m.roda(); m.darat(); m.fungsi();
+        Kapal k = new Kapal();
+        k.tenaga(); k.air(); k.fungsi();
+        Pesawat p = new Pesawat();
+        p.propulsi(); p.udara(); p.fungsi();
+    }
+}
